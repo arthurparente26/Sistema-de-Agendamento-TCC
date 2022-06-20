@@ -1,0 +1,246 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:focus, a:hover{
+  text-decoration: none;
+  color: var(--title-color)
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 225;
+  
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/*===  BASE ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*====  LAYOUT ============================ */
+
+#header {
+  border-bottom: 1px solid white;
+  margin-bottom: 2rem;
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, rgb(130, 40, 214), rgb(90, 29, 105));
+  width: 100%;
+}
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*====  LOGO ============================ */
+.logo {
+  font: 700 1.31rem var(--title-font);
+  color: rgb(255, 255, 255);
+}
+
+.logo:hover{
+  color:rgb(255, 255, 255);
+}
+
+.logo span {
+  color: rgb(239, 175, 255);
+}
+
+.logo-alt {
+  font-size: 1.7rem;
+}
+
+.logo-alt span {
+  color: rgb(239, 175, 255);
+}
+
+/*====  NAVIGATION ============================ */
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+  margin-top: 0.52rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: rgb(232, 222, 241);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(232, 222, 241);
+
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+
+  transition: width 0.2s;
+}
+
+nav ul ul li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(174, 111, 233);
+
+  position: absolute;
+  left: 0;
+  bottom: 0.1rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/*====  DROP DOWN MENU ==================== */
+
+.dd-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dd-menu ul li{
+  display: inline;  
+  position: relative;
+}
+
+.dd-menu ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem;
+  display: inline-block;
+}
+
+/*====  SCHEDULING FORM =================== */
+
+h1 {
+  color: var(--base-color);
+  padding-bottom: 2rem;
+}
+
+.field {
+  border: 0;
+  display: block;
+  margin-top: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 0;
+  width: 28%;
+}
+
+.label {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1.5rem;
+  border-radius: 5px 10px;
+  border-color: rgb(231, 234, 255);
+}
+
+.label:focus {
+  background: rgb(240, 243, 252);
+}
+
+.label-text {
+  margin-left: 5rem;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3rem;
+  padding: 0 3rem;
+  border-radius: 0.25rem;
+  font: 500 1rem var(--body-font);
+  transition: background 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/*====  FOOTER ========================== */
+footer {
+  background: linear-gradient(45deg, rgb(130, 40, 214), rgb(90, 29, 105));
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer.section {
+  padding: 2rem 0;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: white;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  /* reusable classes */
+
+  /* layout */
+  main {
+    padding-top: 7rem;
+  }
+}
