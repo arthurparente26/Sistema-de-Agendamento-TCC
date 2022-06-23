@@ -22,28 +22,28 @@
 
 <body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-<!-- Modal -->
-<div class='modal fade' id='modalExemplo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-      <div class='modal-dialog' role='document'>
-        <div class='modal-content'>
-          <div class='modal-header'>
-            <h5 class='modal-title' id='exampleModalLabel'>Deseja sair da conta?</h5>
-            <button type='button' class='close' data-dismiss='modal' aria-label='Fechar'>
-              <span aria-hidden='true'>&times;</span>
-            </button>
-          </div>
-          <div class='modal-body'>
-            <p style='color: #f00;'>*Ao sair da conta sua sessão será encerrada!</p>
-          </div>
-          <div class='modal-footer'>
-            <button type='button' class='btn btn-secondary ' data-dismiss='modal'>Fechar</button>
-            <a class = 'btn  btn-primary' href = 'logout.php'>Encerrar Sessão</a>
-          </div>
+  <!-- Modal -->
+  <div class='modal fade' id='modalExemplo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title' id='exampleModalLabel'>Deseja sair da conta?</h5>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Fechar'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+        </div>
+        <div class='modal-body'>
+          <p style='color: #f00;'>*Ao sair da conta sua sessão será encerrada!</p>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary ' data-dismiss='modal'>Fechar</button>
+          <a class='btn  btn-primary' href='logout.php'>Encerrar Sessão</a>
         </div>
       </div>
     </div>
+  </div>
   <!-- Header -->
   <header id="header">
     <nav class="container">
@@ -90,12 +90,8 @@
     <div class="container grid">
       <div class="brand">
         <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-        <p>©2022 mecânicaeverton.</p>
+        <p>©2022 mecânicabaiano.</p>
         <p>Todos os direitos reservados.</p>
-      </div>
-
-      <div class="social grid">
-        <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
       </div>
     </div>
   </footer>

@@ -98,21 +98,21 @@ if (!empty($_GET['id'])) {
         unset($_SESSION['servico_limpo']);
       }
       ?>
-
+      <div class="space"></div>
 
       <label class="label-text" for="horario"><strong>Horário</strong></label>
-        <select class="label-select-service" name="horario" id="horario" required>
-          <option value="">Escolha</option>
-          <option value="08:00">08:00</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-        </select>
+      <select class="label-select-service" name="horario" id="horario" required>
+        <option value="">Escolha</option>
+        <option value="08:00">08:00</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+      </select>
 
       <?php
       if (!empty($_SESSION['horario_uso'])) {
@@ -120,19 +120,27 @@ if (!empty($_GET['id'])) {
         unset($_SESSION['horario_uso']);
       }
       ?>
+      <div class="space"></div>
 
       <label class="label-text" for="dia"><strong>Data</strong></label>
       <input class="label" type="date" name="dia" <?php
-        if (!empty($_SESSION['value_dia'])) {
-           echo "value='" . $_SESSION['value_dia'] . "'";
-           unset($_SESSION['value_dia']);
-         }
-         ?> required />
+                                                  if (!empty($_SESSION['value_dia'])) {
+                                                    echo "value='" . $_SESSION['value_dia'] . "'";
+                                                    unset($_SESSION['value_dia']);
+                                                  }
+                                                  ?> required />
 
       <input class="label" type="hidden" name="id" value=" <?php echo  $id ?>" required />
 
       <input type="submit" class="button" name="cadastrar_agendamento" value="Agendar" />
     </form>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <!-- main.js -->

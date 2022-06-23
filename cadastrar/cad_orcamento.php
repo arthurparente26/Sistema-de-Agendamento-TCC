@@ -155,6 +155,13 @@ if (!empty($_GET['id'])) {
 
       <input class="button" type="submit" name="cadastrar_orcamento" value="Cadastrar" />
     </form>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 

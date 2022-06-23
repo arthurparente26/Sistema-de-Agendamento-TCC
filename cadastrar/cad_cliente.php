@@ -25,7 +25,7 @@ session_start();
 
 
 
-<main class="container">
+  <main class="container">
     <!-- Form -->
     <form action="../cadastrar/salvarCadastro.php" method="POST">
       <h1>Cadastro de Cliente</h1>
@@ -69,7 +69,7 @@ session_start();
                                                                         echo "value='" . $_SESSION['value_cpf'] . "'";
                                                                         unset($_SESSION['value_cpf']);
                                                                       }
-                                                                      ?> required minlength="11" maxlength="11" />
+                                                                      ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
         <?php
         if (!empty($_SESSION['cpf_uso'])) {
@@ -92,12 +92,12 @@ session_start();
       </div>
       <div class="space"></div>
       <div class="input-field">
-        <input class="label" type="text" name="telefone" placeholder="Telefone" <?php
+        <input class="label" type="tel" name="telefone" placeholder="Telefone" <?php
                                                                                 if (!empty($_SESSION['value_telefoneC'])) {
                                                                                   echo "value='" . $_SESSION['value_telefoneC'] . "'";
                                                                                   unset($_SESSION['value_telefoneC']);
                                                                                 }
-                                                                                ?> required minlength="11" maxlength="11" />
+                                                                                ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
         <?php
         if (!empty($_SESSION['telefoneC_uso'])) {
@@ -107,7 +107,6 @@ session_start();
         ?>
         <div class="underline"></div>
       </div>
-      <div class="space"></div>
       <input class="button" type="submit" name="cadastrar_cliente" value="Cadastrar" />
     </form>
 

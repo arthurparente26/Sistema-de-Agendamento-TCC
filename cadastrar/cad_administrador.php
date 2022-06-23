@@ -32,7 +32,7 @@ session_start();
               echo "value='" . $_SESSION['value_matricula'] . "'";
               unset($_SESSION['value_matricula']);
             }
-           ?> required />
+           ?> required minlength="3"maxlength="6"/>
           <?php
           if (!empty($_SESSION['matricula_uso'])) {
             echo "<p style='color: #f00; '>" . $_SESSION['matricula_uso'] . "</p>";
@@ -45,11 +45,11 @@ session_start();
 
         <div class="input-field">
           <input class="label" type="text" name="nome" placeholder="Nome" <?php
-                                                                          if (!empty($_SESSION['value_nome'])) {
-                                                                            echo "value='" . $_SESSION['value_nome'] . "'";
-                                                                            unset($_SESSION['value_nome']);
-                                                                          }
-                                                                          ?> required />
+            if (!empty($_SESSION['value_nome'])) {
+              echo "value='" . $_SESSION['value_nome'] . "'";
+              unset($_SESSION['value_nome']);
+            }
+            ?> required />
           <?php
           if (!empty($_SESSION['nome_uso'])) {
             echo "<p style='color: #f00; '>" . $_SESSION['nome_uso'] . "</p>";
@@ -62,17 +62,17 @@ session_start();
 
         <div class="input-field">
           <input class="label" type="text" name="endereco" placeholder="Endereço" <?php
-                                                                                  if (!empty($_SESSION['value_endereco'])) {
-                                                                                    echo "value='" . $_SESSION['value_endereco'] . "'";
-                                                                                    unset($_SESSION['value_endereco']);
-                                                                                  }
-                                                                                  ?> required />
+if (!empty($_SESSION['value_endereco'])) {
+  echo "value='" . $_SESSION['value_endereco'] . "'";
+  unset($_SESSION['value_endereco']);
+}
+?> required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="email" placeholder="Email" <?php
+          <input class="label" type="email" name="email" placeholder="Email" <?php
           if (!empty($_SESSION['value_email'])) {
             echo "value='" . $_SESSION['value_email'] . "'";
             unset($_SESSION['value_email']);
@@ -90,12 +90,12 @@ session_start();
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" placeholder="Telefone" <?php
-                                                                                  if (!empty($_SESSION['value_telefone'])) {
-                                                                                    echo "value='" . $_SESSION['value_telefone'] . "'";
-                                                                                    unset($_SESSION['value_telefone']);
-                                                                                  }
-                                                                                  ?> required minlength="11" maxlength="11" />
+          <input class="label" type="tel" name="telefone" placeholder="Telefone" <?php
+           if (!empty($_SESSION['value_telefone'])) {
+            echo "value='" . $_SESSION['value_telefone'] . "'";
+            unset($_SESSION['value_telefone']);
+          }
+           ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
           <?php
           if (!empty($_SESSION['telefone_uso'])) {
@@ -119,7 +119,7 @@ session_start();
     <footer>
       <div class="footer">
         <div class="logo">
-          <a class="logo ">mecânica<span>baiano</span>.</a>
+          <a class="logo logo-alt" href="../home/home_administrador.php"class="logo ">mecânica<span>baiano</span>.</a>
         </div>
       </div>
     </footer>
