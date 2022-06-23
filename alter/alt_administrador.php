@@ -78,28 +78,35 @@ if (!empty($_GET['id'])) {
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="email" value="<?php echo$email ?>" required />
+          <input class="label" type="email" name="email" value="<?php echo $email ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" value="<?php echo$telefone ?>"/>
+          <input class="label" type="tel" name="telefone" value="<?php echo $telefone ?>" />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="senha" value="<?php echo$senha ?>" required />
+          <input class="label" type="text" name="senha" value="<?php echo $senha ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
-        <input class="label" type="hidden" name="id" value="<?php echo$id ?>" required />
+        <input class="label" type="hidden" name="id" value="<?php echo $id ?>" required />
 
         <input class="button" type="submit" value="Editar" name="atualizar_admin" />
       </div>
     </form>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 

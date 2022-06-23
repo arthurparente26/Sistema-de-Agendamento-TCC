@@ -60,7 +60,7 @@ if (!empty($_GET['id'])) {
         <h1 class="title-form">Editar Cliente</h1>
 
         <div class="input-field">
-          <input class="label" type="text" name="nome" value="<?php echo$nome ?>" required />
+          <input class="label" type="text" name="nome" value="<?php echo $nome ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
@@ -72,7 +72,7 @@ if (!empty($_GET['id'])) {
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="cpf" value="<?php echo  $cpf ?>"/>
+          <input class="label" type="text" name="cpf" value="<?php echo  $cpf ?>" />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
@@ -84,10 +84,9 @@ if (!empty($_GET['id'])) {
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" value="<?php echo  $telefone ?>"/>
+          <input class="label" type="tel" name="telefone" value="<?php echo  $telefone ?>" />
           <div class="underline"></div>
         </div>
-        <div class="space"></div>
 
         <div class="input-field">
           <input class="label" type="hidden" name="id" value="<?php echo  $id ?>" required />
@@ -95,6 +94,13 @@ if (!empty($_GET['id'])) {
 
         <input class="button" type="submit" name="atualizar_cliente" value="Editar" />
       </form>
+      <footer>
+        <div class="footer">
+          <div class="logo">
+            <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </main>
 

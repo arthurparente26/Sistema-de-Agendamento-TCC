@@ -17,47 +17,46 @@ if (!empty($_GET['id'])) {
   if ($result->num_rows > 0) {
     while ($user_data = mysqli_fetch_assoc($result)) {
 
-            $nome    = $user_data['nomeC'];
-            $tira_risco = $user_data['tira_risco'];
-            $rev_pint = $user_data['revitalizacao_pintura'];
-            $pol_cristalizado = $user_data['polimento_cristalizado'];
-            $micro_pint = $user_data['micro_pintura'];
-            $pol_farol = $user_data['polimento_farol'];
-            $pint_geral = $user_data['pintura_geral'];      
-            $valor   = $user_data['valor'];
-            $dia        = $user_data['dia'];
+      $nome    = $user_data['nomeC'];
+      $tira_risco = $user_data['tira_risco'];
+      $rev_pint = $user_data['revitalizacao_pintura'];
+      $pol_cristalizado = $user_data['polimento_cristalizado'];
+      $micro_pint = $user_data['micro_pintura'];
+      $pol_farol = $user_data['polimento_farol'];
+      $pint_geral = $user_data['pintura_geral'];
+      $valor   = $user_data['valor'];
+      $dia        = $user_data['dia'];
 
-            if ($user_data['tira_risco'] == 1) {
-              $tiraC = "checked" ;
-            } else {
-              $tiraC = "";
-            }
-            if ($user_data['revitalizacao_pintura'] == 1) {
-              $revC = "checked" ;
-            } else {
-              $revC = "";
-            }
-            if ($user_data['polimento_cristalizado'] == 1) {
-              $polC = "checked" ;
-            }else {
-              $polC = "";
-            }
-            if ($user_data['micro_pintura'] == 1) {
-              $micC = "checked" ;
-            } else {
-              $micC = "";
-            }
-            if ($user_data['polimento_farol'] == 1) {
-              $polfC = "checked" ;
-            } else {
-              $polfC = "";
-            }
-            if ($user_data['pintura_geral'] == 1) {
-              $pintC = "checked" ;
-            }else {
-              $pintC = "";
-            }
-
+      if ($user_data['tira_risco'] == 1) {
+        $tiraC = "checked";
+      } else {
+        $tiraC = "";
+      }
+      if ($user_data['revitalizacao_pintura'] == 1) {
+        $revC = "checked";
+      } else {
+        $revC = "";
+      }
+      if ($user_data['polimento_cristalizado'] == 1) {
+        $polC = "checked";
+      } else {
+        $polC = "";
+      }
+      if ($user_data['micro_pintura'] == 1) {
+        $micC = "checked";
+      } else {
+        $micC = "";
+      }
+      if ($user_data['polimento_farol'] == 1) {
+        $polfC = "checked";
+      } else {
+        $polfC = "";
+      }
+      if ($user_data['pintura_geral'] == 1) {
+        $pintC = "checked";
+      } else {
+        $pintC = "";
+      }
     }
   } else {
     header('Location: ../listar/listar_orcamento.php');
@@ -107,42 +106,42 @@ if (!empty($_GET['id'])) {
         </div>
         <div class="space"></div>
 
-        <label class="label-text" ><strong>Tipos de Serviço</strong></label>
-          
         <label class="label-text"><strong>Tipos de Serviço</strong></label>
 
-<div class="custom-checkbox">
-  <input id="tira_risco" type="checkbox" name="tira_risco" disabled="" value="<?php  echo $tira_risco; ?>" <?php echo  $tiraC  ?> >
-  <label for="tira_risco">Tira Risco</label>
-</div>
+        <label class="label-text"><strong>Tipos de Serviço</strong></label>
 
-<div class="custom-checkbox">
-  <input id="revitalizacao_pintura" type="checkbox" name="revitalizacao_pintura" disabled="" value= "<?php echo $rev_pint; ?>" <?php echo $revC    ?>>
-  <label for="revitalizacao_pintura">Revitalização de Pintura</label>
-</div>
+        <div class="custom-checkbox">
+          <input id="tira_risco" type="checkbox" name="tira_risco" disabled="" value="<?php echo $tira_risco; ?>" <?php echo  $tiraC  ?>>
+          <label for="tira_risco">Tira Risco</label>
+        </div>
 
-<div class="custom-checkbox">
-  <input id="polimento_cristalizado" type="checkbox" name="polimento_cristalizado" disabled="" value= "<?php echo $pol_cristalizado; ?>" <?php  echo $polC ?>>
-  <label for="polimento_cristalizado">Polimento Cristalizado</label>
-</div>
+        <div class="custom-checkbox">
+          <input id="revitalizacao_pintura" type="checkbox" name="revitalizacao_pintura" disabled="" value="<?php echo $rev_pint; ?>" <?php echo $revC    ?>>
+          <label for="revitalizacao_pintura">Revitalização de Pintura</label>
+        </div>
 
-<div class="custom-checkbox">
-  <input id="micro_pintura" type="checkbox" name="micro_pintura" disabled="" value= "<?php echo $micro_pint; ?>" <?php  echo $micC ?> >
-  <label for="micro_pintura">Micro Pintura</label>
-</div>
+        <div class="custom-checkbox">
+          <input id="polimento_cristalizado" type="checkbox" name="polimento_cristalizado" disabled="" value="<?php echo $pol_cristalizado; ?>" <?php echo $polC ?>>
+          <label for="polimento_cristalizado">Polimento Cristalizado</label>
+        </div>
 
-<div class="custom-checkbox">
-  <input id="polimento_farol" type="checkbox" name="polimento_farol" disabled="" value= "<?php echo $pol_farol; ?>" <?php echo $polfC  ?>>
-  <label for="polimento_farol">Polimento de Farol</label>
-</div>
+        <div class="custom-checkbox">
+          <input id="micro_pintura" type="checkbox" name="micro_pintura" disabled="" value="<?php echo $micro_pint; ?>" <?php echo $micC ?>>
+          <label for="micro_pintura">Micro Pintura</label>
+        </div>
 
-<div class="custom-checkbox">
-  <input id="pintura_geral" type="checkbox" name="pintura_geral" disabled="" value= "<?php echo $pint_geral; ?>" <?php echo $pintC   ?>>
-  <label for="pintura_geral">Pintura Geral</label>
-</div>
+        <div class="custom-checkbox">
+          <input id="polimento_farol" type="checkbox" name="polimento_farol" disabled="" value="<?php echo $pol_farol; ?>" <?php echo $polfC  ?>>
+          <label for="polimento_farol">Polimento de Farol</label>
+        </div>
+
+        <div class="custom-checkbox">
+          <input id="pintura_geral" type="checkbox" name="pintura_geral" disabled="" value="<?php echo $pint_geral; ?>" <?php echo $pintC   ?>>
+          <label for="pintura_geral">Pintura Geral</label>
+        </div>
 
         <div class="input-field">
-        <label class="label-text" for="dia"><strong><BR>Data:</strong></label>
+          <label class="label-text" for="dia"><strong><BR>Data</strong></label>
           <input class="label" type="date" name="dia" value="<?php echo  $dia ?>" disabled="" required />
           <div class="underline"></div>
         </div>
@@ -153,7 +152,6 @@ if (!empty($_GET['id'])) {
           <input class="label" type="text" name="valor" value=" <?php echo  $valor ?>" required />
           <div class="underline"></div>
         </div>
-        <div class="space"></div>
 
         <div class="input-field">
           <input class="label" type="hidden" name="id" value=" <?php echo  $id ?>" required />
@@ -162,6 +160,13 @@ if (!empty($_GET['id'])) {
         <input class="button" type="submit" name="atualizar_orcamento" value="Editar" />
       </div>
     </form>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 
