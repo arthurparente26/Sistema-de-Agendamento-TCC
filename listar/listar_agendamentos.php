@@ -22,7 +22,7 @@
 
 <body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   <header id="header">
     <nav class="container">
@@ -55,22 +55,22 @@
     mysqli_close($conexao);
     ?>
 
-<!-- Modal de Sucesso de agendamento -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
-  <div class="modal-dialog" role="document">
-   <div class="modal-content ">
-	  <div class="modal-header alert alert-success" style="height: 60px;">
-	   <h4 class="modal-title " id="exampleModalLongTitle">Agendamento de Serviço</h2>
-		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
-		<span aria-hidden="true">×</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-	   <h5>Agendamento marcado com sucesso!</h5>
-	    </div>
-   </div>
-  </div>
-</div>
+    <!-- Modal de Sucesso de agendamento -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content ">
+          <div class="modal-header alert alert-success" style="height: 60px;">
+            <h4 class="modal-title " id="exampleModalLongTitle">Agendamento de Serviço</h2>
+              <button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <h5>Agendamento marcado com sucesso!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container py-5">
       <table class="table  table-light">
@@ -146,8 +146,8 @@
             </td>";
             echo "<td> <a class = 'btn btn-sm btn-success' href = '../cadastrar/cad_orcamento.php?id=$user_data[id]'><i class='bi bi-plus-square'></i> </a> </td>";
             echo "</tr>";
-            
-            if(!empty($_SESSION['sucesso'])){
+
+            if (!empty($_SESSION['sucesso'])) {
               echo "<script type='text/javascript'>
               $(window).on('load',function(){
               $('#myModal').modal('show'); });
@@ -160,17 +160,18 @@
       </table>
     </div>
 
-    <!--<footer class="section">
+    <footer class="section">
       <div class="container grid">
         <div class="brand">
           <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-          <p>©2022 mecânicaeverton.</p>
+          <p>©2022 mecânicabaiano.</p>
           <p>Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>-->
+    </footer>
   </main>
 </body>
 <!-- main.js -->
 <script src="../bootstrap.min.js"></script>
+
 </html>

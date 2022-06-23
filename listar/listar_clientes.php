@@ -22,7 +22,7 @@
 
 <body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   <header id="header">
     <nav class="container">
@@ -48,27 +48,27 @@
     include "../validation/conn.php";
     require "../validation/verifica.php";
 
-    $resultado = mysqli_query($conexao, "SELECT * FROM cliente");
+    $resultado = mysqli_query($conexao, "SELECT * FROM cliente ORDER BY nomeC asc");
 
     mysqli_close($conexao);
 
     ?>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
-  <div class="modal-dialog" role="document">
-   <div class="modal-content ">
-	  <div class="modal-header alert alert-success" style="height: 60px;">
-	   <h4 class="modal-title " id="exampleModalLongTitle">Cadastro de Cliente</h2>
-		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
-		<span aria-hidden="true">×</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-	   <h5>Cliente cadastrado com sucesso!</h5>
-	    </div>
-   </div>
-  </div>
-</div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content ">
+          <div class="modal-header alert alert-success" style="height: 60px;">
+            <h4 class="modal-title " id="exampleModalLongTitle">Cadastro de Cliente</h2>
+              <button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <h5>Cliente cadastrado com sucesso!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container py-5">
       <table class="table  table-light">
@@ -129,7 +129,7 @@
             echo "</tr>";
           }
 
-          if(!empty($_SESSION['sucesso'])){
+          if (!empty($_SESSION['sucesso'])) {
             echo "<script type='text/javascript'>
             $(window).on('load',function(){
             $('#myModal').modal('show'); });
@@ -145,12 +145,8 @@
     <div class="container grid">
       <div class="brand">
         <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-        <p>©2022 mecânicaeverton.</p>
+        <p>©2022 mecânicabaiano.</p>
         <p>Todos os direitos reservados.</p>
-      </div>
-
-      <div class="social grid">
-        <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
       </div>
     </div>
   </footer>

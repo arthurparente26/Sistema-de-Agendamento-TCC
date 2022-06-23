@@ -19,7 +19,7 @@
 
 <body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   <header id="header">
     <nav class="container">
@@ -46,7 +46,7 @@
     include "../validation/conn.php";
     require "../validation/verifica.php";
 
-    $sql = "SELECT * FROM usuario ORDER BY id ASC";
+    $sql = "SELECT * FROM usuario ORDER BY nome ASC";
     $resultado = $conexao->query($sql);
 
     mysqli_close($conexao);
@@ -107,7 +107,6 @@
            
             </td>";
             echo "</tr>";
-
           }
           ?>
         </tbody>
@@ -119,12 +118,8 @@
     <div class="container grid">
       <div class="brand">
         <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-        <p>©2022 mecânicaeverton.</p>
+        <p>©2022 mecânicabaiano.</p>
         <p>Todos os direitos reservados.</p>
-      </div>
-
-      <div class="social grid">
-        <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
       </div>
     </div>
   </footer>
