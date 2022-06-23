@@ -8,11 +8,11 @@ Desenvolvedores: Arthur Parente, Erick Vinicius e Gabriel Peres.
 
 ## Descrição do projeto
 
-Desenvolver um sistema interno que auxilie no sistema de agendamento de ordens de serviço da empresa.
+Desenvolver um sistema interno que auxilie no sistema de agendamento serviços da empresa.
 
 ## Status do Projeto
 
-Em desenvolvimento. Porém, já se encontra na fase final.
+Concluído.
 
 ## Funcionalidades do projeto
 
@@ -20,7 +20,7 @@ Em desenvolvimento. Porém, já se encontra na fase final.
 - `Crud do cliente`: No sistema, podemos cadastrar, listar, alterar e deletar um cliente.
 - `Crud do agendamento`: No sistema, podemos cadastrar, listar, alterar e deletar um agendamento.
 - `Crud do orçamento`: No sistema, podemos cadastrar, listar, alterar e deletar um orçamento.
-- `Gerar uma nota de compra`: Após ter feito o orçamento, podemos gerar uma nota de compra em PDF com as informçaões do agendamento do cliente.
+- `Gerar uma ordem de serviço`: Após ter feito o orçamento, podemos gerar uma ordem de serviço em PDF com as informçaões da empresa, cliente, agendamento e orçamanento do serviço especificado.
 
 ## Acesso ao projeto
 
@@ -28,7 +28,9 @@ Em desenvolvimento. Porém, já se encontra na fase final.
 
 ## Abrir e rodar o projeto
 
-**Para utilizar o projeto, será necessário um software para gerar o script do banco de dados, um editor de código-fonte e um servidor web/banco de dados.**
+**Para utilizar o projeto, será necessário o XAMPP.**
+- Criar uma pasta chamada "projeto" no diretório htdocs (pasta do XAMPP) e colocar o projeto nela.
+- Abrir o MysqlWorkBench e abrir a pasta banco de dados na pasta do projeto, e abrir o arquivo "script" no software, depois é só rodar o script.
 
 ## Tecnologias usadas
 
