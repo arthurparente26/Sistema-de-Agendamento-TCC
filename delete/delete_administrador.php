@@ -36,5 +36,6 @@ if (!empty($_GET['id'])) {
     header('Location: ../home/logout.php');
   } else {
     header('Location: ../listar/listar_admin.php');
+    $_SESSION['excluir'] = 1;
   }
 }
