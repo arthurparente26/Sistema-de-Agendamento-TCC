@@ -17,5 +17,5 @@ if (!empty($_GET['id'])) {
     $resultDelete = $conexao->query($sqlDelete);
   }
 }
-
+$_SESSION['excluir'] = 1;
 header('Location: ../listar/listar_clientes.php');
