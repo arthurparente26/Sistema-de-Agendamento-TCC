@@ -197,7 +197,6 @@ if (isset($_POST['cadastrar_cliente'])) {
     unset($_SESSIOn['erroT']);
     unset($_SESSION['value_enderecoC']);
     $_SESSION['sucesso'] = 1;
-    echo "Cliente cadastrado com sucesso!!";
     header('Location: ../listar/listar_clientes.php');
     exit();
   }
