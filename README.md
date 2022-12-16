@@ -42,6 +42,10 @@ Concluído.
 - `BootStrap`
 - `JavaScript`
 
+## Caso esteja interessado no sistema
+
+entre em contato no e-mail: arthurparente26@gmail.com ou no telefone (61) 98621-7605
+
 ## Autores
 
 | [Arthur Parente</sub>](https://github.com/arthurparente26) | [Erick Vinicius</sub>](https://github.com/ViiniVinicin) | [Gabriel Peres</sub>](https://github.com/Gabriel-Peres-Dias) |
