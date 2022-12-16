@@ -44,7 +44,7 @@ Concluído.
 
 ## Caso esteja interessado no sistema
 
-entre em contato no e-mail: arthurparente26@gmail.com ou no telefone (61) 98621-7605
+Entre em contato no e-mail: arthurparente26@gmail.com ou no telefone (61) 98621-7605
 
 ## Autores
 
